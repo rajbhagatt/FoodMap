@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>
+India Food Map by Raj
+</title>
+	<meta charset="utf-8" />
+	
+  	<link href='style/css.css' rel='stylesheet' type='text/css'>
+  	<link href="style/font-awesome.min.css" rel="stylesheet">
+ 	
+	<link rel="stylesheet" type="text/css" href="style/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="style/MarkerCluster.Default.css" />
+	
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="style/leaflet.css" />
+	
+	<link rel="stylesheet" href="style/basics.css" />
+	
+	<script> L_PREFER_CANVAS = true;</script>
+	<script src="script/leaflet.js"></script>
+	<script src="data/Place_Food.js"></script>
+	<script src="script/jquery.min.js"></script>
+	<script type='text/javascript' src='script/leaflet.markercluster.js'></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMHKVT7D55hEZgUJX0rh9cp7Un7-JWTpI&region=IN""></script>
+	<script src="script/leaflet-google.js"></script>
+</head>
+<body>
+<div>
+<table style='width:100%'>
+<tr>
+<td>
+<b>Food: </b>
+<select id='foodbox' class='drop' onchange='boxchange()'>
+<option value='All' selected>All</option>
+<option value='Peda'>Peda</option>
+<option value='Banana Chips'>Banana Chips</option>
+<option value='Halwa'>Halwa</option>
+<option value='Macaroon'>Macaroon</option>
+<option value='Kadalai Mittai'>Kadalai Mittai</option>
+</select>
+</td>
+<td>
+<b>State: </b>
+<select id='statebox' class='drop' onchange='boxchange()'>
+<option value='All' selected>All</option>
+<option value='Karnataka'>Karnataka</option>
+<option value='Kerala'>Kerala</option>
+<option value='Maharashtra'>Maharashtra</option>
+<option value='Tamil Nadu'>Tamil Nadu</option>
+<option value='Uttar Pradesh'>Uttar Pradesh</option>
+</select>
+</td>
+
+<td style="width:40%; text-align:center; background-color:#EEEEEE">
+<b>
+<p style="color:black; font-family:'verdana'; font-size: 31px">
+FOOD MAP OF INDIA
+</p>
+</b>
+</td>
+
+
+<td style="text-align:center; background-color:#BBBBBB">
+Is a food/place missing? 
+<br>
+<a href="https://cutt.ly/1j02HMJ">Fill this form!</a>
+
+</td>
+
+<td style="text-align:right;">
+
+<i>Created by Raj Bhagat Palanichamy <br></i>
+<a href=https://twitter.com/rajbhagatt>Find me in Twitter</a>
+
+</td>
+</tr>
+</table>
+</div>
+<div id="map" class="map" style="z-index:1; position: absolute; left:0%; height: 93%; width: 99.85%; float:left; border:1px solid black;">
+
+
+<script src="script/mapper.js"></script>
+
+</div>
+</body>
+</html>
